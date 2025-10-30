@@ -23,6 +23,32 @@ function App() {
     { order_id: 7, order: "Detergent", by: 4 },
   ];
 
+  // Create table rows dynamically
+  const userRows = users
+    .map(
+      (u) => `
+        <tr>
+          <td>${u.user_id}</td>
+          <td>${u.first_name}</td>
+          <td>${u.last_name}</td>
+          <td>${u.address}</td>
+        </tr>
+      `
+    )
+    .join("");
+
+  const orderRows = orders
+    .map(
+      (o) => `
+        <tr>
+          <td>${o.order_id}</td>
+          <td>${o.order}</td>
+          <td>${o.by}</td>
+        </tr>
+      `
+    )
+    .join("");
+
   return `
     <div>
       <h1>Artificial React Database Simulator</h1>
