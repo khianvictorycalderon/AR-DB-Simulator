@@ -27,6 +27,21 @@ function App() {
     <div>
       <h1>Artificial React Database Simulator</h1>
       <p>Put all your codes in assets/script.js</p>
+
+      <br/><br/><br/>
+      
+      <h2>User's JSON data:</h2>
+      <textarea class="textbox" readonly>
+        ${JSON.stringify(users)}
+      </textarea>
+
+      <br/><br/><br/>
+      
+      <h2>User's order JSON data:</h2>
+      <textarea class="textbox" readonly>
+        ${JSON.stringify(orders)}
+      </textarea>
+
     </div>
   `;
 }
