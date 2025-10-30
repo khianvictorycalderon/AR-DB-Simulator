@@ -1,0 +1,10 @@
+body {
+    background:rgb(43, 43, 43);
+    font-size:1.5rem;
+    color:white;
+}
+
+h1, h2, p {
+    padding: 0;
+    margin: 0;
+}
