@@ -58,16 +58,48 @@ function App() {
       
       <h2>User's JSON data:</h2>
       <textarea class="textbox" readonly>
-        ${JSON.stringify(users)}
+        ${JSON.stringify(users, null, 2)}
       </textarea>
 
       <br/><br/><br/>
       
       <h2>User's order JSON data:</h2>
       <textarea class="textbox" readonly>
-        ${JSON.stringify(orders)}
+        ${JSON.stringify(orders, null, 2)}
       </textarea>
 
+      <br/><br/><br/>
+
+      <h2>Users Table:</h2>
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${userRows}
+        </tbody>
+      </table>
+
+      <br/><br/>
+
+      <h2>Orders Table:</h2>
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Order</th>
+            <th>By (User ID)</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${orderRows}
+        </tbody>
+      </table>
     </div>
   `;
 }
